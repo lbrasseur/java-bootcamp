@@ -6,6 +6,13 @@ public class Item {
 	private int itemQuant;
 	private boolean itemOffer;
 	
+	public Item(String itemName, float itemPrice, int itemQuant, boolean itemOffer){
+		this.itemName = itemName;
+		this.itemPrice = itemPrice;
+		this.itemQuant = itemQuant;
+		this.itemOffer = itemOffer;
+	}
+	
 	public String getItemName() {
 		return itemName;
 	}
@@ -33,7 +40,4 @@ public class Item {
 	public void setItemOffer(boolean itemOffer) {
 		this.itemOffer = itemOffer;
 	}
-	
-
-
 }
