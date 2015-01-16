@@ -1,10 +1,18 @@
 package com.matin.shopping.cart;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cart {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// Ya lo termino!!
+	private final List<Item> items;
+
+	public Cart() {
+		items = new ArrayList<>();
+	}
+
+	public List<Item> getItems() {
+		return items;
 	}
 
 }
