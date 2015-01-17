@@ -39,5 +39,8 @@ public class User {
 	public List<Payments> getTransaccions() {
 		return transaccions;
 	}
+	
+	public void userMenu(){
+	}
 
 }
