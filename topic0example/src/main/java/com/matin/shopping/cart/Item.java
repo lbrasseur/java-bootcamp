@@ -5,12 +5,14 @@ public class Item {
 	private float itemPrice;
 	private int itemQuant;
 	private boolean itemOffer;
+	private int itemId;
 	
-	public Item(String itemName, float itemPrice, int itemQuant, boolean itemOffer){
+	public Item(String itemName, float itemPrice, int itemQuant, boolean itemOffer, int itemId){
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
 		this.itemQuant = itemQuant;
 		this.itemOffer = itemOffer;
+		this.itemId = itemId;
 	}
 	
 	public String getItemName() {
@@ -39,5 +41,13 @@ public class Item {
 	}
 	public void setItemOffer(boolean itemOffer) {
 		this.itemOffer = itemOffer;
+	}
+
+	public int getItemId() {
+		return itemId;
+	}
+
+	public void setItemId(int itemId) {
+		this.itemId = itemId;
 	}
 }

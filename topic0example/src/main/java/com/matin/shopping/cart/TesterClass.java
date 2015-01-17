@@ -2,6 +2,8 @@ package com.matin.shopping.cart;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TesterClass {
 
@@ -9,7 +11,11 @@ public class TesterClass {
 		
 		Scanner keyboard = new Scanner(System.in);
 		int menuOption = 100;
-		User newUser = null;		
+		User newUser = null;
+		Item newItem = null;
+		List<Item> itemList;
+		itemList = new ArrayList<>();
+		
 		while(menuOption != 0){
 			
 			System.out.println("******Test Menu******");
@@ -58,6 +64,33 @@ public class TesterClass {
 						}
 						menuOption = 100;
 						break;
+						
+				case 3:
+						String itemName;
+						float itemPrice;
+						int itemQuant;
+						String offerAnswer;
+						boolean itemOffer;
+						int itemId;
+						System.out.println("******Enter Item Info******");
+						System.out.println("Enter Item Description");
+						itemName = keyboard.nextLine();
+						System.out.println("Enter the item price");
+						itemPrice = keyboard.nextFloat();
+						System.out.println("Enter the item quantity");
+						itemQuant = keyboard.nextInt();
+						System.out.println("Is this item in offer? (s/n)");
+						offerAnswer = keyboard.nextLine();
+						if (offerAnswer == "s"){
+							itemOffer = true;
+						}
+						else{
+							itemOffer = false;
+						}
+						newItem = new Item(itemName, itemPrice, itemQuant, itemOffer, itemId);
+						menuOption = 100;
+						break;
+						
 			}
 		}
 		
