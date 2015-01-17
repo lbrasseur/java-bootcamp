@@ -87,10 +87,18 @@ public class TesterClass {
 						else{
 							itemOffer = false;
 						}
+						itemId = 1+itemList.size();
 						newItem = new Item(itemName, itemPrice, itemQuant, itemOffer, itemId);
+						itemList.add(newItem);
 						menuOption = 100;
 						break;
 						
+				case 4:
+						for (int i = 0; i < itemList.size(); i++){
+							System.out.println("Item "+itemList.get(i).getItemName()+"....... $ "+itemList.get(i).getItemPrice());
+						}
+						menuOption = 100;
+						break;
 			}
 		}
 		
