@@ -17,9 +17,10 @@ public class TesterClass {
 			System.out.println("1- Enter User");
 			System.out.println("2- Show User Info");
 			System.out.println("3- Add Item");
-			System.out.println("4- Add Offer");
-			System.out.println("5- List of Items");
-			System.out.println("6- Show Cart");
+			System.out.println("4- List of Items");
+			System.out.println("5- Add Offer");
+			System.out.println("6- Show Offers");
+			System.out.println("7- Show Cart");
 			System.out.println("0- Exit");
 			System.out.println("");
 			System.out.println("*********************");
