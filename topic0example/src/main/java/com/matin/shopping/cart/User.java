@@ -10,7 +10,7 @@ public class User {
 	private final String userMail;
 	private String userFullName;
 	
-	private final List<Payments> transaccions;
+	private final List<PaymentManager> transaccions;
 	
 	public User(String userId, String userPass, String userMail, String userFullName) {
 		this.userId = userId;
@@ -36,7 +36,7 @@ public class User {
 		return userFullName;
 	}
 
-	public List<Payments> getTransaccions() {
+	public List<PaymentManager> getTransaccions() {
 		return transaccions;
 	}
 	
