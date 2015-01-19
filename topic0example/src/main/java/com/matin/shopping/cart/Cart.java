@@ -46,6 +46,9 @@ public class Cart {
 	}
 
 	public float getFinalPrice() {
+		for (int i = 0; i < items.size(); i++){
+			finalPrice =+ items.get(i).getItemPrice();
+		}
 		return finalPrice;
 	}
 

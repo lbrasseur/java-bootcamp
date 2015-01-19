@@ -1,10 +1,11 @@
 package com.matin.shopping.cart;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Offers {
 
-	private List<Offers> itemsOffer;
+	private List<Item> itemsOffer = new ArrayList<>();
 	private int nroOffer;
 	private int offerPrice;
 	
@@ -12,11 +13,11 @@ public class Offers {
 		
 	}
 	
-	public void setItemsOffer(List<Offers> itemsOffer) {
+	public void setItemsOffer(List<Item> itemsOffer) {
 		this.itemsOffer = itemsOffer;
 	}
 	
-	public List<Offers> getItemsOffer() {
+	public List<Item> getItemsOffer() {
 		return itemsOffer;
 	}
 
@@ -36,4 +37,7 @@ public class Offers {
 		this.offerPrice = offerPrice;
 	}
 
+	public void addItemsOffer(Item item){
+		itemsOffer.add(item);
+	}
 }

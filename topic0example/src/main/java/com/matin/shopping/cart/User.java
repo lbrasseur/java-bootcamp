@@ -10,7 +10,7 @@ public class User {
 	private final String userMail;
 	private String userFullName;
 	
-	private final List<PaymentManager> transaccions;
+	private List<PaymentManager> transaccions;
 	
 	public User(String userId, String userPass, String userMail, String userFullName) {
 		this.userId = userId;

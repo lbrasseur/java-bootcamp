@@ -13,9 +13,10 @@ public class Menu {
 		User newUser = null;
 		Item newItem = null;
 		List<Item> itemList;
-		List<Cart> cartList;
 		itemList = new ArrayList<>();
-		cartList = new ArrayList<>();
+		
+		Cart cart = new Cart();
+		PaymentManager paymentManager = new PaymentManager();
 		
 		
 		while(menuOption != 0){
@@ -101,17 +102,30 @@ public class Menu {
 						}
 						menuOption = 100;
 						break;
+						
+				case 5:
+						
 				
 				case 7:
-						String checkoutAnswer; 
+						String checkoutAnswer;
+						int paymentOption;
 						System.out.println("****** Cart ******");
-
+						for (int i = 0; i < cart.getItems().size(); i++){
+							System.out.println("Item "+cart.getItems().get(i).getItemName()+"....... $ "+cart.getItems().get(i).getItemPrice());
+						}
+						System.out.println("Subtotal: "+cart.getFinalPrice());
 						System.out.println("******************");
 						System.out.println("Proced check out? (s/n)");
 						checkoutAnswer = keyboard.nextLine();
 						if (checkoutAnswer == "s"){
 							System.out.println("****** Payment ******");
-							
+							System.out.println("1- Cash");
+							System.out.println("2- Credit Card");
+							System.out.println("3- Paypal");
+							System.out.println("");
+							System.out.println("Select a Payment method");
+							paymentOption = keyboard.nextInt();
+							paymentManager.Payment(paymentOption, cart.getFinalPrice());
 						}
 						else{
 							menuOption = 100;
