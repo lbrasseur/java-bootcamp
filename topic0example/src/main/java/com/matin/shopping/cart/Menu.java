@@ -14,10 +14,9 @@ public class Menu {
 		Item newItem = null;
 		List<Item> itemList;
 		itemList = new ArrayList<>();
-		
+		Offers offers = new Offers();
 		Cart cart = new Cart();
 		PaymentManager paymentManager = new PaymentManager();
-		
 		
 		while(menuOption != 0){
 			
@@ -104,7 +103,31 @@ public class Menu {
 						break;
 						
 				case 5:
+						int itemToOffer = 100;
+						float offerPrice;
+						System.out.println("****** List of items for offer******");
+						for (int i = 0; i < itemList.size(); i++){
+							System.out.println(i+"- Item "+itemList.get(i).getItemName()+"....... $ "+itemList.get(i).getItemPrice());
+						}
+						while (itemToOffer != 0){
+							System.out.println("Select an item number to add to offer or 0 to exit");
+							itemToOffer = keyboard.nextInt();
+							offers.addItemsOffer(itemList.get(itemToOffer));
+							itemList.get(itemToOffer).setItemOffer(true);
+						}
+						System.out.println("Put the price for the offer");
+						offerPrice = keyboard.nextFloat();
+						offers.setOfferPrice(offerPrice);
+						menuOption = 100;
+						break;
 						
+				case 6:
+						System.out.println("****** Offer List ******");
+						for (int i = 0; i < offers.getItemsOffer().size(); i++){
+							System.out.println("Item "+offers.getItemsOffer().get(i).getItemName()+"....... $ "+offers.getItemsOffer().get(i).getItemPrice());
+						}
+						menuOption = 100;
+						break;
 				
 				case 7:
 						String checkoutAnswer;
