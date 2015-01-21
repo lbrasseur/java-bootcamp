@@ -7,7 +7,6 @@ public class Offers {
 	
 	private String description;
 	private float discount;
-	private Products product;
 	private ArrayList<Products> products;
 	
 	public Offers(){
@@ -51,14 +50,6 @@ public class Offers {
 		this.discount = discount;
 	}
 
-	public Products getProduct() {
-		return product;
-	}
-
-	public void setProduct(Products product) {
-		this.product = product;
-	}
-
 	public ArrayList<Products> getProducts() {
 		return products;
 	}
@@ -70,7 +61,7 @@ public class Offers {
 	@Override
 	public String toString() {
 		return "Offers [description=" + description + ", discount=" + discount
-				+ ", product=" + product + ", products=" + products + "]";
+				+ ", products=" + products + "]";
 	}
 	
 }
