@@ -1,6 +1,8 @@
 package classes;
 
 import java.util.Date;
+import java.util.ArrayList;
+import classes.Products;
 
 public class ShoppingCart {
 	
@@ -8,13 +10,14 @@ public class ShoppingCart {
 	private Date date;
 	private float prodQty;
 	private boolean state = true;
+	private ArrayList <Products> cart;
 	
 	public ShoppingCart(){
 		
 	}
 
 	public ShoppingCart(int userCode, int productCode, int offerCode,
-			int trasNum, Date date, float prodQty, boolean state) {
+			int trasNum, Date date, float prodQty, boolean state, ArrayList<Products> cart) {
 		super();
 		this.userCode = userCode;
 		this.productCode = productCode;
@@ -23,7 +26,10 @@ public class ShoppingCart {
 		this.date = date;
 		this.prodQty = prodQty;
 		this.state = state;
+		this.setCart(cart);
 	}
+	
+	
 
 	public int getUserCode() {
 		return userCode;
@@ -81,13 +87,20 @@ public class ShoppingCart {
 		this.state = state;
 	}
 
+	public ArrayList <Products> getCart() {
+		return cart;
+	}
+
+	public void setCart(ArrayList <Products> cart) {
+		this.cart = cart;
+	}
+
 	@Override
 	public String toString() {
 		return "ShoppingCart [userCode=" + userCode + ", productCode="
 				+ productCode + ", offerCode=" + offerCode + ", trasNum="
 				+ trasNum + ", date=" + date + ", prodQty=" + prodQty
-				+ ", state=" + state + "]";
+				+ ", state=" + state + ", cart=" + cart + "]";
 	}
-	
 	
 }
