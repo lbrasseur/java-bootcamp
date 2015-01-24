@@ -19,7 +19,6 @@ public class WordWrapping {
 		}else{
 			arraySize = ww.getStr().length()/ww.getLength()+1;
 		}
-		
 		String [] strArray = new String [arraySize];
 		int index = 0; // For moving position of rows.
 		for(int i = 0; i<ww.getStr().length(); i += ww.getLength()){
